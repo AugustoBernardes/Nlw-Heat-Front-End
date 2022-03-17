@@ -1,10 +1,13 @@
-
+import styles from "./App.module.scss";
+import { LoginBox } from "./components/LoginBox";
+import { MessageList } from "./components/MassageList";
 
 export function App() {
 
   return (
-    <main className="contentWrapper">
-        <h1>Hello World!</h1>
+    <main className={styles.contentWrapper}>
+      <MessageList/>
+      <LoginBox/>
     </main>
   )
 }
