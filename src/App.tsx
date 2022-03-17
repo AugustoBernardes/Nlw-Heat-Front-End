@@ -3,7 +3,9 @@
 export function App() {
 
   return (
-    <h1>Hello World</h1>
+    <main className="contentWrapper">
+        <h1>Hello World!</h1>
+    </main>
   )
 }
 
