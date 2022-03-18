@@ -31,7 +31,7 @@ export function MessageList(){
                 {messages.map(message => {
 
                     return(
-                        <li className={styles.message}>
+                        <li key={message.id} className={styles.message}>
                             <p className={styles.messageContent}>{message.text}</p>
                             <div className={styles.messageUser}>
                                 <div className={styles.userImage}>
