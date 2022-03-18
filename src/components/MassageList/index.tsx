@@ -27,16 +27,23 @@ export function MessageList(){
             <img src={logoImg} alt="DoWhile2021" />
 
             <ul className={styles.messageList}> 
+
+                {messages.map(message => {
+
+                    return(
+                        <li className={styles.message}>
+                            <p className={styles.messageContent}>{message.text}</p>
+                            <div className={styles.messageUser}>
+                                <div className={styles.userImage}>
+                                    <img src={message.user.avatar_url} alt={message.user.name} />
+                                </div>
+                                <span>{message.user.name}</span>
+                            </div>
+                        </li>
+                    )
+                })}
+
                 
-                <li className={styles.message}>
-                    <p className={styles.messageContent}>Essa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagemEssa é uma mensagem</p>
-                    <div className={styles.messageUser}>
-                        <div className={styles.userImage}>
-                            <img src="https://github.com/AugustoBernardes.png" alt="Augusto Bernardes" />
-                        </div>
-                        <span>Diego Fernandes</span>
-                    </div>
-                </li>
 
                
             </ul>
