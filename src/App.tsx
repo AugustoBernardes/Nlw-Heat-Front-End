@@ -5,6 +5,8 @@ import { AuthContext } from "./contexts/auth"
 import { useContext } from "react";
 import { SendMessageForm } from "./components/SendMessageFrom";
 
+
+
 export function App() {
   const { user } = useContext(AuthContext);
 

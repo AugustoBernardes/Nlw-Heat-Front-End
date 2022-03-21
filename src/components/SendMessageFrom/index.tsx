@@ -4,6 +4,8 @@ import { api } from "../../services/api"
 import { AuthContext } from "../../contexts/auth"
 import { useContext,useState,FormEvent  } from "react";
 
+
+
 export function SendMessageForm(){
     const { user, signOut } = useContext(AuthContext);
     const [message,setMessage] = useState('');
