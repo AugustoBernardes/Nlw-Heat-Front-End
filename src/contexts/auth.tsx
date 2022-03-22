@@ -36,8 +36,8 @@ type AuthResponse = {
 
 export function AuthProvider(props:AuthProvider){
     const [user, setUser] = useState<User | null>(null);
-
-    const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=5292af6a016c981023c6`
+   
+    const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID }`
 
     function signOut(){
         setUser(null);

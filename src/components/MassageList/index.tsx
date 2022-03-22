@@ -4,6 +4,8 @@ import io from "socket.io-client"
 import { useEffect, useState } from "react"
 import { api } from "../../services/api"
 
+
+
 // Showing the message type to use
 type Message = {
     id:string;
@@ -16,15 +18,16 @@ type Message = {
 
 const messagesQueue: Message[] = []
 
-const socket = io('http://localhost:4000')
+const socket = io(import.meta.env.VITE_API_URL)
 
 socket.on('new_message', (newMessage:Message) => {
     messagesQueue.push(newMessage)
 })
 
-export function MessageList(){
-    const [messages, setMessages] = useState<Message[]>([])
 
+export function MessageList(){
+   
+    const [messages, setMessages] = useState<Message[]>([])
     useEffect(() => {
         const timer = setInterval(() =>{
             if(messagesQueue.length > 0){
