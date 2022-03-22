@@ -3,7 +3,7 @@ System developed in Rocketseat course, developing a ReactJs application for GitH
 
 >Status: Finished ✔️
 
-### That's a System developed on course from [Rocketseat](https://www.rocketseat.com.br), front end of application using GitHub login and a real time chat using socket.io
+### That's a System developed on [Rocketseat](https://www.rocketseat.com.br) course, this is the front end of application using GitHub login and a real time chat using socket.io
 ---
 ## Sistem functions 
 + Login using GitHub oauth
